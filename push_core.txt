@@ -1,0 +1,15 @@
+--------------上传步骤----------------------
+git remote add origin http://github.com/aztx/learning.git//
+git add readme.txt
+git commit -m"注释"
+git push origin master
+--------------还原历史版本-----------------
+ git reset -- hard HEAD^ //还原历史版本，HEAD^表示上一个版本，HEAD^^表示上上>    各版本，。。。也可以这样表示HEAD～10（倒数第十个版本）
+--------------还原后返回------------------
+git reflog //查看所有修改记录，包括还原地址
+git reset --hard 地址 //地址来源于reflog
+--------------其他指令----------------------
+git status //查看状态
+git diff readme.txt   //查看具体修改内容
+git log //查看文本修改状态，只能查看当期状态之前动状态
+git log --pretty==oneline//查看缩略信息
